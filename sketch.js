@@ -8,8 +8,8 @@ function loadImageFromJSON() {
 function setup() {
     mtgCard = loadJSON('https://api.scryfall.com/cards/random', loadImageFromJSON);
     createCanvas(windowWidth, windowHeight);
-    textSize(32);
-    textAlign(CENTER);
+    textSize(12);
+    textAlign(RIGHT, BOTTOM);
 }
 
 function draw() {
@@ -27,7 +27,7 @@ function drawImage() {
 
 function drawArtistName() {
     fill(255);
-    text(mtgCard.artist, windowWidth/2, windowHeight-16);
+    text(mtgCard.artist, windowWidth-1, windowHeight-1);
 }
 
 function windowResized() {
