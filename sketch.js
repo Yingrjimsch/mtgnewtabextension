@@ -1,5 +1,6 @@
 let mtgCard;
 let img;
+let artist = '';
 
 function loadImageFromJSON() {
     img = loadImage(mtgCard.image_uris.art_crop);
@@ -16,8 +17,7 @@ function draw() {
     background(0);
     imageMode(CENTER);
     img ? drawImage() : '';
-    mtgCard ? drawArtistName() : '';
-    
+    artist = mtgCard ? mtgCard.artist : '';
 }
 
 function drawImage() {
@@ -27,7 +27,7 @@ function drawImage() {
 
 function drawArtistName() {
     fill(255);
-    text(mtgCard.artist, windowWidth-1, windowHeight-1);
+    text(artist, windowWidth-1, windowHeight-1);
 }
 
 function windowResized() {
