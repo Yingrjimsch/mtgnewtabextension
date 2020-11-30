@@ -18,6 +18,7 @@ function draw() {
     imageMode(CENTER);
     img ? drawImage() : '';
     artist = mtgCard ? mtgCard.artist : '';
+    drawArtistName();
 }
 
 function drawImage() {
